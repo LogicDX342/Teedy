@@ -16,7 +16,7 @@ pipeline {
                 bat 'mvn pmd:pmd'
             }
         }
-        step('Test report') {
+        stage('Test report') {
             steps {
                 bat 'mvn test --fail-never'
                 bat 'mvn surefire-report:report'
